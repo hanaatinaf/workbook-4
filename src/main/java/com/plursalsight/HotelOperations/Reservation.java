@@ -33,8 +33,8 @@ public class Reservation {
         return isWeekedend;
     }
 
-    public void setWeekednd(boolean weekedend) {
-        isWeekedend = weekedend;
+    public void setWeekednd(boolean isWeekedend) {
+        this.isWeekedend =isWeekedend;
     }
 
     public double getPrice(){
