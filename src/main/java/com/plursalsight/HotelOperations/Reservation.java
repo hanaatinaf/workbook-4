@@ -17,10 +17,8 @@ public class Reservation {
 
     public void setRoomType(String roomType) {
         if (roomType.equalsIgnoreCase("King") || roomType.equalsIgnoreCase("Double")){
-
+            this.roomType = roomType;
         }
-
-        this.roomType = roomType;
     }
 
     public int getNumOfNights() {
@@ -40,13 +38,17 @@ public class Reservation {
     }
 
     public double getPrice(){
-        double price = (roomType == "King")? 139: 124 ;
-
-
-
-        return price;
+        double price = (roomType.equalsIgnoreCase("King"))? 139: 124 ;
+        if (isWeekedend){
+            return  price * 1.10;
+        }
+        else {
+            return price;
+        }
     }
     public  double getReservationTotal(){
+
+        return getPrice() * numOfNights;
 
     }
 
