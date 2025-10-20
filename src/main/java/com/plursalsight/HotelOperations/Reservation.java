@@ -3,14 +3,12 @@ package com.plursalsight.HotelOperations;
 public class Reservation {
    private String roomType;
    private  int numOfNights;
-   private boolean isWeekednd;
+   private boolean isWeekedend;
 
-    public Reservation(double recerviationTota, String roomType, double price, int numOfNights, boolean isWeekednd) {
-       // this.recerviationTota = recerviationTota;
+    public Reservation(String roomType, int numOfNights, boolean isWeekedend) {
         this.roomType = roomType;
-       // this.price = price;
         this.numOfNights = numOfNights;
-        this.isWeekednd = isWeekednd;
+        this.isWeekedend = isWeekedend;
     }
 
     public String getRoomType() {
@@ -18,7 +16,7 @@ public class Reservation {
     }
 
     public void setRoomType(String roomType) {
-        if (roomType == "King"){
+        if (roomType.equalsIgnoreCase("King") || roomType.equalsIgnoreCase("Double")){
 
         }
 
@@ -33,12 +31,23 @@ public class Reservation {
         this.numOfNights = numOfNights;
     }
 
-    public boolean isWeekednd() {
-        return isWeekednd;
+    public boolean isWeekedend() {
+        return isWeekedend;
     }
 
-    public void setWeekednd(boolean weekednd) {
-        isWeekednd = weekednd;
+    public void setWeekednd(boolean weekedend) {
+        isWeekedend = weekedend;
+    }
+
+    public double getPrice(){
+        double price = (roomType == "King")? 139: 124 ;
+
+
+
+        return price;
+    }
+    public  double getReservationTotal(){
+
     }
 
 
