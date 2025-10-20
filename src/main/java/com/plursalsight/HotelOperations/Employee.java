@@ -52,17 +52,8 @@ public class Employee {
     }
 
     public void setHoursWorked(double hoursWorked) {
-        this.hoursWorked = hoursWorked;
-    }
-    public double getTotalPay(){
-
-        return 0;
-    }
-    public  double getRegularHours(){
-
-        return 0;
-    }
-    public  double getOvertimeHours(){
-        return 0;
-    }
+        this.hoursWorked = hoursWorked;}
+    public double getTotalPay(){return 0;}
+    public  double getRegularHours(){ return 0;}
+    public  double getOvertimeHours(){return 0;}
 }
