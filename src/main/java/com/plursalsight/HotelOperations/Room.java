@@ -51,5 +51,23 @@ public class Room {
         return  !isOccuppied && !isDirty;
     }
 
+    public  boolean  checkIn(){
+        if (!isOccuppied && !isDirty){
+            isDirty = true;
+            isOccuppied = true;
+
+            return  true;
+        }
+
+        return false;
+    }
+    public boolean checkout(){
+        if (isOccuppied && isDirty){
+            return  true;
+        }
+
+        return false;
+    }
+
 
 }

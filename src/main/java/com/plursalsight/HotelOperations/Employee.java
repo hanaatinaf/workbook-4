@@ -14,7 +14,6 @@ public class Employee {
         this.department = department;
         this.hoursWorked = hoursWorked;
     }
-
     public int getEmployeeId() {
         return employeeId;
     }
